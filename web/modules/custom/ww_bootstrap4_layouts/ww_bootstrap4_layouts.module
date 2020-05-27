@@ -9,14 +9,19 @@
  * @see https://www.drupal.org/node/2217931
  */
 
+use Drupal\block_content\Entity\BlockContent;
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
 function ww_bootstrap4_layouts_preprocess_layout__bs_carousel(&$variables) {
-  if ($variables['content']['#entity'] instanceof \Drupal\block_content\Entity\BlockContent) {
+  if ($variables['content']['#entity'] instanceof BlockContent) {
     /** @var \Drupal\block_content\Entity\BlockContent $block */
     $block = $variables['content']['#entity'];
 
     if (!$block->get('field_carousel_items')->isEmpty()) {
       $carousel_items = $block->get('field_carousel_items')->referencedEntities();
-      foreach($carousel_items as $item) {
+      foreach ($carousel_items as $item) {
         $view_builder = \Drupal::entityTypeManager()->getViewBuilder($item->getEntityTypeId());
         $variables['items'][] = $view_builder->view($item);;
       }
