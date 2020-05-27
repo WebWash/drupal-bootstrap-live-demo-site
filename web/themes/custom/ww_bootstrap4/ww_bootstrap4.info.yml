@@ -1,0 +1,20 @@
+name: 'WW bootstrap4'
+type: theme
+description: 'WW bootstrap4 subtheme based on Bootstrap 4 theme.'
+core: 8.x
+core_version_requirement: '^8 || ^9'
+base theme: bootstrap4
+stylesheets-remove:
+  - '@bootstrap4/css/styles.css'
+libraries:
+  - ww_bootstrap4/global-styling
+regions:
+  header: Header
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: Breadcrumbs
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer

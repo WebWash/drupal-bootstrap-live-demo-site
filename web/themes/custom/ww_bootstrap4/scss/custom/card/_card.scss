@@ -1,0 +1,6 @@
+.card {
+  img{
+    @extend .img-fluid;
+    @extend .card-img-top;
+  }
+}

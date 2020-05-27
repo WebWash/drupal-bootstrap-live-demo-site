@@ -1,0 +1,6 @@
+name: WW Bootstrap4 layouts
+type: module
+description: Bootstrap4 layouts
+package: WebWash
+core: 8.x
+core_version_requirement: ^8 || ^9

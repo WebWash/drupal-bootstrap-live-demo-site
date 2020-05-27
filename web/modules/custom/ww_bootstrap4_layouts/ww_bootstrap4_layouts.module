@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for ww_bootstrap4_layouts module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+function ww_bootstrap4_layouts_preprocess_layout__bs_carousel(&$variables) {
+  if ($variables['content']['#entity'] instanceof \Drupal\block_content\Entity\BlockContent) {
+    /** @var \Drupal\block_content\Entity\BlockContent $block */
+    $block = $variables['content']['#entity'];
+
+    if (!$block->get('field_carousel_items')->isEmpty()) {
+      $carousel_items = $block->get('field_carousel_items')->referencedEntities();
+      foreach($carousel_items as $item) {
+        $view_builder = \Drupal::entityTypeManager()->getViewBuilder($item->getEntityTypeId());
+        $variables['items'][] = $view_builder->view($item);;
+      }
+    }
+
+    $variables['carousel_id'] = $block->id();
+  }
+}

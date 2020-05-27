@@ -1,0 +1,22 @@
+uuid: 5da74eb7-9253-4680-8cc7-fe0aff6bfef0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ww_bootstrap4
+_core:
+  default_config_hash: tZtWC6EKIYALVtpV4mPz79GsLZD6IFWb7Wk1B7Rd8Go
+id: ww_bootstrap4_messages
+theme: ww_bootstrap4
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  provider: system
+  label_display: '0'
+visibility: {  }

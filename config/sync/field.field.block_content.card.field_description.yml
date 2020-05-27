@@ -1,0 +1,21 @@
+uuid: 3b9b7fcb-a20d-4065-a33d-622bf5cc7a3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - field.storage.block_content.field_description
+  module:
+    - text
+id: block_content.card.field_description
+field_name: field_description
+entity_type: block_content
+bundle: card
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

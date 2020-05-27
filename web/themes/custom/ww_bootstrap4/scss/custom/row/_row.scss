@@ -1,0 +1,8 @@
+.layout-builder__section {
+  .layout-builder__add-block {
+    @include make-col-ready();
+    @include make-col(12);
+  }
+}
+
+

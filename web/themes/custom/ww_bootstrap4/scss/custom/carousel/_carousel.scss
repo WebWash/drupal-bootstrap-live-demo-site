@@ -1,0 +1,5 @@
+.carousel-item {
+  img{
+    @extend .img-fluid;
+  }
+}

@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a two-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if content %}
+  <div{{ attributes }}>
+
+    {% if content.content %}
+      <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
+        <div id="carousel--{{ carousel_id }}" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            {% for item in items %}
+              <li data-target="#carousel--{{ carousel_id }}" data-slide-to="{{ loop.index0 }}" class="{{ loop.first ? 'active' }}"></li>
+            {% endfor %}
+          </ol>
+          <div class="carousel-inner">
+            {% for item in items %}
+            <div class="carousel-item {{ loop.first ? 'active' }}">
+              {{ item }}
+            </div>
+            {% endfor %}
+          </div>
+          <a class="carousel-control-prev" href="#carousel--{{ carousel_id }}" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel--{{ carousel_id }}" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        {{ content.content|without('field_carousel_items') }}
+      </div>
+    {% endif %}
+
+  </div>
+{% endif %}

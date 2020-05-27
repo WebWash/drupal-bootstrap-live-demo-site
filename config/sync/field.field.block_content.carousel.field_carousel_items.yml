@@ -1,0 +1,28 @@
+uuid: f1df11b8-df9f-4d02-92e8-1bc919d633e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.carousel
+    - block_content.type.carousel_item
+    - field.storage.block_content.field_carousel_items
+id: block_content.carousel.field_carousel_items
+field_name: field_carousel_items
+entity_type: block_content
+bundle: carousel
+label: 'Carousel items'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      carousel_item: carousel_item
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

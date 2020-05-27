@@ -1,0 +1,17 @@
+// Include bootstrap variables definitions overrides.
+@import 'overrides/variables';
+
+// Include parent theme with all things Bootstrap for full override.
+// Relative path to this styles.scss file.
+// Example: @import "../../../../../../themes/contrib/bootstrap4/scss/style";
+@import "../../../themes/contrib/bootstrap4/scss/style";
+
+// Include custom sub theme.
+@import 'custom/variables';
+@import 'custom/card/card';
+@import 'custom/row/row';
+@import 'custom/carousel/carousel';
+
+// Include custom sub theme.
+//@import 'custom/mixins/misc';
+//@import 'custom/misc';

@@ -1,0 +1,93 @@
+name: drupal-bs-build
+recipe: drupal8
+config:
+  webroot: web
+proxy:
+  appserver:
+    - drupal-bs-build.lndo.site
+services:
+  appserver:
+    build_internal:
+      - >-
+        curl
+        https://github.com/drush-ops/drush/releases/download/8.3.2/drush.phar -L
+        -o /tmp/drush.phar && chmod +x /tmp/drush.phar && mv /tmp/drush.phar
+        /usr/local/bin/drush && drush --version
+      - >-
+        curl https://drupalconsole.com/installer -L -o /tmp/drupal.phar && chmod
+        +x /tmp/drupal.phar && mv /tmp/drupal.phar /usr/local/bin/drupal && true
+    composer: {}
+    config: {}
+    type: 'php:7.2'
+    via: apache
+    ssl: true
+    xdebug: false
+    webroot: web
+    overrides:
+      environment:
+        SIMPLETEST_BASE_URL: 'https://appserver'
+        SIMPLETEST_DB: 'mysql://drupal8:drupal8@database/drupal8'
+  database:
+    config: {}
+    authentication: mysql_native_password
+    type: mysql
+    portforward: true
+    creds:
+      user: drupal8
+      password: drupal8
+      database: drupal8
+tooling:
+  composer:
+    service: appserver
+    cmd: composer --ansi
+  db-import <file>:
+    service: ':host'
+    description: Imports a dump file into a database service
+    cmd: /helpers/sql-import.sh
+    options:
+      host:
+        description: The database service to use
+        default: database
+        alias:
+          - h
+      no-wipe:
+        description: Do not destroy the existing database before an import
+        boolean: true
+  'db-export [file]':
+    service: ':host'
+    description: Exports database from a database service to a file
+    cmd: /helpers/sql-export.sh
+    user: root
+    options:
+      host:
+        description: The database service to use
+        default: database
+        alias:
+          - h
+      stdout:
+        description: Dump database to stdout
+  php:
+    service: appserver
+    cmd: php
+  mysql:
+    service: ':host'
+    description: Drops into a MySQL shell on a database service
+    cmd: mysql -uroot
+    options:
+      host:
+        description: The database service to use
+        default: database
+        alias:
+          - h
+  drush:
+    service: appserver
+  drupal:
+    service: appserver
+    description: Runs drupal console commands
+  install-drupal:
+    service: appserver
+    description: Installs the Drupal demo site.
+    cmd: drush site-install -y --account-pass=admin --existing-config
+events:
+  pre-start:
+    - appserver: composer install

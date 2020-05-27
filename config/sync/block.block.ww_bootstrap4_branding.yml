@@ -1,0 +1,25 @@
+uuid: e5ff69c5-3030-4630-a55d-5794f5a5dcc8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ww_bootstrap4
+_core:
+  default_config_hash: 0XmTH5dbJRl-fsDBgX10MzeFMarkhKpzU7ZGdGPfAMU
+id: ww_bootstrap4_branding
+theme: ww_bootstrap4
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }
