@@ -24,6 +24,9 @@ class BsRowLayout extends MultiWidthLayoutBase {
     ];
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function build(array $regions) {
     foreach ($this->getPluginDefinition()->getRegionNames() as $region_name) {
       if (array_key_exists($region_name, $regions)) {
@@ -36,6 +39,12 @@ class BsRowLayout extends MultiWidthLayoutBase {
     return parent::build($regions);
   }
 
+  /**
+   * Get the Bootstrap classes by the selected column width.
+   *
+   * @return string
+   *   Bootstrap classes.
+   */
   protected function getColumnWidth() {
     $col = [
       '1-col' => 'col-lg-12 mb-4',
