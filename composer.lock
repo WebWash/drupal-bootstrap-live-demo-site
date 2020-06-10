@@ -391,16 +391,6 @@
                 "ssl",
                 "tls"
             ],
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-04-08T08:27:21+00:00"
         },
         {
@@ -481,16 +471,6 @@
                 "autoload",
                 "dependency",
                 "package"
-            ],
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-05-06T08:28:10+00:00"
         },
@@ -779,12 +759,6 @@
             "keywords": [
                 "Xdebug",
                 "performance"
-            ],
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                }
             ],
             "time": "2020-03-01T12:26:26+00:00"
         },
@@ -2131,7 +2105,7 @@
                     "datestamp": "1588048957",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
+                        "message": "RC releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -2146,8 +2120,8 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "VladimirAus",
-                    "homepage": "https://www.drupal.org/user/673120"
+                    "name": "jannakha",
+                    "homepage": "https://www.drupal.org/user/3085703"
                 }
             ],
             "description": "Master theme using Bootstrap 4: powerful front-end framework for faster and easier web development.",
@@ -2653,7 +2627,7 @@
                 "drupal/core": "^8.8 || ^9"
             },
             "require-dev": {
-                "drupal/devel": "3.x-dev",
+                "drupal/devel": "*",
                 "drupal/field_group": "3.x-dev"
             },
             "type": "drupal-module",
@@ -2707,26 +2681,29 @@
         },
         {
             "name": "drupal/field_group",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/field_group.git",
-                "reference": "8.x-3.0"
+                "reference": "8.x-3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/field_group-8.x-3.0.zip",
-                "reference": "8.x-3.0",
-                "shasum": "8d87cdc4abc417aa4d411bffcaeb0a3ef1afa497"
+                "url": "https://ftp.drupal.org/files/projects/field_group-8.x-3.1.zip",
+                "reference": "8.x-3.1",
+                "shasum": "8a719eaea594f0ba874172831cb28da93c66b77a"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8.8 || ^9"
+            },
+            "require-dev": {
+                "drupal/jquery_ui_accordion": "^1.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0",
-                    "datestamp": "1580250787",
+                    "version": "8.x-3.1",
+                    "datestamp": "1591772567",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2735,7 +2712,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -2762,7 +2739,8 @@
             "description": "Provides the field_group module.",
             "homepage": "https://www.drupal.org/project/field_group",
             "support": {
-                "source": "https://git.drupalcode.org/project/field_group"
+                "source": "https://git.drupalcode.org/project/field_group",
+                "issues": "https://www.drupal.org/project/issues/field_group"
             }
         },
         {
@@ -2982,12 +2960,12 @@
             "version": "0.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/njh/easyrdf.git",
+                "url": "https://github.com/easyrdf/easyrdf.git",
                 "reference": "acd09dfe0555fbcfa254291e433c45fdd4652566"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/njh/easyrdf/zipball/acd09dfe0555fbcfa254291e433c45fdd4652566",
+                "url": "https://api.github.com/repos/easyrdf/easyrdf/zipball/acd09dfe0555fbcfa254291e433c45fdd4652566",
                 "reference": "acd09dfe0555fbcfa254291e433c45fdd4652566",
                 "shasum": ""
             },
@@ -5727,16 +5705,6 @@
                 "parser",
                 "validator"
             ],
-            "funding": [
-                {
-                    "url": "https://github.com/Seldaek",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/seld/jsonlint",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-04-30T19:05:18+00:00"
         },
         {
@@ -5997,20 +5965,6 @@
             ],
             "description": "Symfony BrowserKit Component",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-03-15T09:38:08+00:00"
         },
         {
@@ -6192,20 +6146,6 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-03-16T08:31:04+00:00"
         },
         {
@@ -6503,20 +6443,6 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-04-12T16:54:01+00:00"
         },
         {
@@ -6772,20 +6698,6 @@
                 "redlock",
                 "semaphore"
             ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-03-16T15:51:59+00:00"
         },
         {
@@ -6851,20 +6763,6 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-02-21T08:01:47+00:00"
         },
         {
@@ -7210,20 +7108,6 @@
                 "polyfill",
                 "portable",
                 "shim"
-            ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-05-12T16:47:27+00:00"
         },
@@ -7775,20 +7659,6 @@
             "keywords": [
                 "debug",
                 "dump"
-            ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-04-12T16:14:02+00:00"
         },
@@ -8372,6 +8242,5 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "platform-dev": []
 }
