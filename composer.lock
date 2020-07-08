@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0cd95dd22a39c55bc8a7aa70b6ef425b",
+    "content-hash": "87ace8ab4e6bb7d52a7f8950cd1e43fb",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2131,7 +2131,7 @@
                     "datestamp": "1588048957",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
+                        "message": "RC releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -2146,8 +2146,8 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "VladimirAus",
-                    "homepage": "https://www.drupal.org/user/673120"
+                    "name": "jannakha",
+                    "homepage": "https://www.drupal.org/user/3085703"
                 }
             ],
             "description": "Master theme using Bootstrap 4: powerful front-end framework for faster and easier web development.",
@@ -2519,21 +2519,21 @@
         },
         {
             "name": "drupal/core-project-message",
-            "version": "8.8.6",
+            "version": "9.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
-                "reference": "10be18c6a401de8e243777de6a74cb45a7ecacad"
+                "reference": "571ad1a0824d53e1f780584b883ee61a5c8c0b28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-project-message/zipball/10be18c6a401de8e243777de6a74cb45a7ecacad",
-                "reference": "10be18c6a401de8e243777de6a74cb45a7ecacad",
+                "url": "https://api.github.com/repos/drupal/core-project-message/zipball/571ad1a0824d53e1f780584b883ee61a5c8c0b28",
+                "reference": "571ad1a0824d53e1f780584b883ee61a5c8c0b28",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.1",
-                "php": ">=7.0.8"
+                "composer-plugin-api": "^1.1 || ^2",
+                "php": ">=7.3.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -2553,7 +2553,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2020-02-21T09:36:23+00:00"
+            "time": "2020-05-04T10:06:27+00:00"
         },
         {
             "name": "drupal/core-recommended",
@@ -2653,7 +2653,7 @@
                 "drupal/core": "^8.8 || ^9"
             },
             "require-dev": {
-                "drupal/devel": "3.x-dev",
+                "drupal/devel": "*",
                 "drupal/field_group": "3.x-dev"
             },
             "type": "drupal-module",
@@ -2982,12 +2982,12 @@
             "version": "0.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/njh/easyrdf.git",
+                "url": "https://github.com/easyrdf/easyrdf.git",
                 "reference": "acd09dfe0555fbcfa254291e433c45fdd4652566"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/njh/easyrdf/zipball/acd09dfe0555fbcfa254291e433c45fdd4652566",
+                "url": "https://api.github.com/repos/easyrdf/easyrdf/zipball/acd09dfe0555fbcfa254291e433c45fdd4652566",
                 "reference": "acd09dfe0555fbcfa254291e433c45fdd4652566",
                 "shasum": ""
             },
