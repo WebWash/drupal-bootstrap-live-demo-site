@@ -1,0 +1,23 @@
+uuid: db3f06f5-379a-4071-82a8-586e5f1c7707
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.portfolio
+  module:
+    - text
+id: node.portfolio.body
+field_name: body
+entity_type: node
+bundle: portfolio
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,8 @@
+uuid: c285dcd9-8e3b-4106-9eb5-24abb4ce9bbc
+langcode: en
+status: true
+dependencies: {  }
+name: 'Portfolio category'
+vid: po
+description: ''
+weight: 0

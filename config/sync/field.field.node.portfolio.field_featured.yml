@@ -1,0 +1,28 @@
+uuid: 5a76b3b2-31ca-4b23-af2a-3133bbf6b5c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured
+    - media.type.image
+    - node.type.portfolio
+id: node.portfolio.field_featured
+field_name: field_featured
+entity_type: node
+bundle: portfolio
+label: Featured
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
