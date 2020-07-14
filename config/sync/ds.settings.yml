@@ -6,6 +6,12 @@ classes:
   region:
     - card|Card
     - 'card-deck|Card Deck'
+    - row|row
+    - col|col
+    - col-md-4|col-md-4
+    - col-md-6|col-md-6
+    - col-md-8|col-md-8
+    - h-100|h-100
   field: {  }
 use_field_names: true
 _core:

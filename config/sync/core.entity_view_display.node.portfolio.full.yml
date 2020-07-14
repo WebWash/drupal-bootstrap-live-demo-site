@@ -1,0 +1,141 @@
+uuid: 9796d44f-bd12-458f-ab6a-330c6b41e112
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.portfolio.body
+    - field.field.node.portfolio.field_featured
+    - field.field.node.portfolio.field_portfolio_category
+    - node.type.portfolio
+    - views.view.related_projects
+  module:
+    - ds
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: ds_2col
+        layout_settings:
+          label: ''
+          wrappers:
+            left: div
+            right: div
+          outer_wrapper: div
+          attributes: ''
+          link_attribute: ''
+          link_custom: ''
+          classes:
+            layout_class:
+              row: row
+            left:
+              col-md-8: col-md-8
+            right:
+              col-md-4: col-md-4
+        components:
+          f37fb61f-5ca7-44e6-934d-cf5d0487cf7d:
+            uuid: f37fb61f-5ca7-44e6-934d-cf5d0487cf7d
+            region: right
+            configuration:
+              id: 'field_block:node:portfolio:body'
+              label: Body
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: default
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          f261ecad-7283-4876-b7bb-547a92a42baf:
+            uuid: f261ecad-7283-4876-b7bb-547a92a42baf
+            region: left
+            configuration:
+              id: 'field_block:node:portfolio:field_featured'
+              label: Featured
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: bare
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: default
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          e95cc0a6-d0cf-44be-b1d2-7698eb82b09e:
+            uuid: e95cc0a6-d0cf-44be-b1d2-7698eb82b09e
+            region: content
+            configuration:
+              id: 'views_block:related_projects-block_1'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: node.portfolio.full
+targetEntityType: node
+bundle: portfolio
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_featured:
+    type: entity_reference_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_portfolio_category: true
