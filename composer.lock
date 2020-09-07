@@ -2147,17 +2147,17 @@
         },
         {
             "name": "drupal/bootstrap4",
-            "version": "2.0.1",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap4.git",
-                "reference": "2.0.1"
+                "reference": "2.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap4-2.0.1.zip",
-                "reference": "2.0.1",
-                "shasum": "73916b3e8e8b13932a90396701c8154711be3398"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap4-2.1.0.zip",
+                "reference": "2.1.0",
+                "shasum": "0e082435a2fbd3c60ed603780217ae37d32e000e"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -2165,8 +2165,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "2.0.1",
-                    "datestamp": "1591197886",
+                    "version": "2.1.0",
+                    "datestamp": "1599405573",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5129,6 +5129,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2019-09-17T06:23:10+00:00"
         },
         {
